@@ -14,4 +14,5 @@ class MyTokenObtainPairView(TokenObtainPairView):
 class UserApiViewSet(ModelViewSet):
     permission_classes = [CustomPermission]
     serializer_class = UserSerializers
+    http_method_names = ['get']
     queryset = User.objects.all()
